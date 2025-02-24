@@ -1,19 +1,19 @@
 ---
 title: "Connect with Us"
 meta_title: ""
-description: "this is meta description"
+description: "Contact Sashi Support Team"
 draft: false
 
 #Contact Options
 contact_meta:
   - name: "Address"
-    contact: "123 Main Street, Anytown, </br> CA 12335 - USA"
+    contact: "396 Arnold Way Burnside, Bulawayo, </br> Zimbabwe"
 
   - name: "Email"
-    contact: "yourmail@domain.com </br> support@domain.com"
+    contact: "miltonhyndrex@gmail.com </br> miltonhyndrex@gmail.com"
 
   - name: "Phone"
-    contact: "Mobile: (08) 123 456 789 </br> Hotline: 1009 678 456"
+    contact: "(263) 77 471 2228 </br> (263) 71 521 2928"
 
   - name: "Shop Time"
     contact: "Available at 10am-8pm </br>"
