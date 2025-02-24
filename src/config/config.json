@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "Astrofront",
-    "base_url": "https://astrofront.vercel.app/",
+    "title": "Sashi Online Store",
+    "base_url": "https://sashi-official.onrender.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -9,7 +9,7 @@
     "logo_darkmode": "/images/logo-darkmode.png",
     "logo_width": "150",
     "logo_height": "33",
-    "logo_text": "Astrofront"
+    "logo_text": "Sashi Online Store"
   },
 
   "settings": {
@@ -22,19 +22,19 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Designed And Developed by [Themefisher](https://themefisher.com/)"
+    "copyright": "Designed And Developed by The Sashi Team"
   },
 
   "navigation_button": {
     "enable": true,
     "label": "Get Started",
-    "link": "https://github.com/themefisher/astrofront"
+    "link": "/"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Shopify Storefront Boilerplate"
+    "meta_author": "Milton Vafana",
+    "meta_image": "/",
+    "meta_description": "/"
   },
 
   "shopify": {
