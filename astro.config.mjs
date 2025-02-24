@@ -1,14 +1,13 @@
+import { defineConfig } from "astro/config";
+import node from "@astrojs/node"; // Changed from vercel
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import AutoImport from "astro-auto-import";
-import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
-
-import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,21 +15,19 @@ export default defineConfig({
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   output: "server",
+  
+  // Add this server configuration
+  server: {
+    host: true,
+    port: 10000
+  },
 
   integrations: [
     react(),
     sitemap(),
     tailwind({ applyBaseStyles: false }),
     AutoImport({
-      imports: [
-        "@/shortcodes/Button",
-        "@/shortcodes/Accordion",
-        "@/shortcodes/Notice",
-        "@/shortcodes/Video",
-        "@/shortcodes/Youtube",
-        "@/shortcodes/Tabs",
-        "@/shortcodes/Tab",
-      ],
+      imports: [/* your imports */],
     }),
     mdx(),
   ],
@@ -38,12 +35,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [
       remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
+      [remarkCollapse, { test: "Table of contents" }]
     ],
     shikiConfig: {
       theme: "one-dark-pro",
@@ -52,5 +44,8 @@ export default defineConfig({
     extendDefaultPlugins: true,
   },
 
-  adapter: vercel(),
+  // Changed to Node adapter
+  adapter: node({
+    mode: "standalone"
+  })
 });
