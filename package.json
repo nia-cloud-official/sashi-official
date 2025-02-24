@@ -6,6 +6,7 @@
   "license": "MIT",
   "packageManager": "yarn@1.22.19",
   "scripts": {
+    "start": "node ./dist/server/entry.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
